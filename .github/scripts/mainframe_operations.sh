@@ -25,13 +25,12 @@ chmod +x ./scripts/linux_gnucobol_run_tests
 echo "Made linux_gnucobol_run_tests executable"
 
 ls -al
+ls ./scripts/ -al
 
 # Function to run cobolcheck and copy files
 run_cobolcheck() {
     program=$1
     echo "Running cobolcheck for $program"
-
-    find / -name "linux_gnucobol_run_tests"
 
     # Run cobolcheck, but don't exit if it fails
     java -jar ./bin/cobol-check-0.2.19.jar -p $program
