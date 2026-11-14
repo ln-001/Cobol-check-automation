@@ -30,6 +30,8 @@ run_cobolcheck() {
     program=$1
     echo "Running cobolcheck for $program"
 
+    find / -name "linux_gnucobol_run_tests"
+
     # Run cobolcheck, but don't exit if it fails
     java -jar ./bin/cobol-check-0.2.19.jar -p $program
     echo "Cobolcheck execution completed for $program (exceptions may have occurred)"
