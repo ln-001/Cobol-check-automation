@@ -5,5 +5,6 @@
 #
 # GnuCOBOL 2.2 or later is installed and on the path. Its executable or alias or symlink is named "cobc".
 echo "Started"
+
 cd "$(dirname $1)"
 cobc -xj $@
