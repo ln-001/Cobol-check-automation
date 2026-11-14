@@ -58,10 +58,9 @@ run_cobolcheck() {
     else
         echo "${program}.JCL not found"
     fi
-
-    # Run for each program
-    for program in NUMBERS EMPPAY DEPTPAY; do
-        run_cobolcheck $program
-    done
-        echo "Mainframe operations completed"
 }
+# Run for each program
+for program in NUMBERS EMPPAY DEPTPAY; do
+    run_cobolcheck $program
+done
+    echo "Mainframe operations completed"
