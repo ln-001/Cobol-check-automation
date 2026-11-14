@@ -13,7 +13,7 @@ java -version
 ZOWE_USERNAME="Z77196"
 
 # Change to the cobolcheck directory
-cd ../cobolcheck
+cd cobol-check
 echo "Changed to $(pwd)"
 ls -al
 
