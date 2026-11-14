@@ -15,7 +15,6 @@ ZOWE_USERNAME="Z77196"
 # Change to the cobolcheck directory
 cd cobol-check
 echo "Changed to $(pwd)"
-ls -al
 
 # Make cobolcheck executable
 chmod +x ./bin/cobol-check-0.2.19.jar
@@ -24,6 +23,8 @@ echo "Made cobolcheck executable"
 # Make script in scripts directory executable
 chmod +x ./scripts/linux_gnucobol_run_tests
 echo "Made linux_gnucobol_run_tests executable"
+
+ls -al
 
 # Function to run cobolcheck and copy files
 run_cobolcheck() {
