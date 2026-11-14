@@ -17,11 +17,11 @@ cd cobolcheck
 echo "Changed to $(pwd)"
 
 # Make cobolcheck executable
-chmod +x obol-check-0.2.19.jar
+chmod +x cobol-check-0.2.19.jar
 echo "Made cobolcheck executable"
 
 # Make script in scripts directory executable
-cd scripts
+cd ./scripts
 chmod +x linux_gnucobol_run_tests
 echo "Made linux_gnucobol_run_tests executable"
 cd..
