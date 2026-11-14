@@ -17,21 +17,17 @@ cd cobol-check
 echo "Changed to $(pwd)"
 
 # Make cobolcheck executable
-chmod +x ./bin/cobol-check-0.2.19.jar
+chmod +x cobol-check-0.2.19.jar
 echo "Made cobolcheck executable"
 
 # Make script in scripts directory executable
 chmod +x ./scripts/linux_gnucobol_run_tests
 echo "Made linux_gnucobol_run_tests executable"
 
-ls -al
-ls ./scripts/ -al
-
 # Function to run cobolcheck and copy files
 run_cobolcheck() {
     program=$1
     echo "Running cobolcheck for $program"
-    cd ./bin
     # Run cobolcheck, but don't exit if it fails
     java -jar cobol-check-0.2.19.jar -p $program
     echo "Cobolcheck execution completed for $program (exceptions may have occurred)"
