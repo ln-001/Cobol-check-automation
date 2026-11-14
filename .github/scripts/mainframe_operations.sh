@@ -18,22 +18,24 @@ echo "Changed to $(pwd)"
 ls -al
 
 # Make cobolcheck executable
-chmod +x ./cobol-check-0.2.19.jar
+chmod +x ./bin/cobol-check-0.2.19.jar
 echo "Made cobolcheck executable"
 
 # Make script in scripts directory executable
-cd scripts
-chmod +x linux_gnucobol_run_tests
+chmod +x ./scripts/linux_gnucobol_run_tests
 echo "Made linux_gnucobol_run_tests executable"
-cd ..
 
 # Function to run cobolcheck and copy files
 run_cobolcheck() {
     program=$1
     echo "Running cobolcheck for $program"
 
+
+    # Check scripts folder
+    ls -l ./scripts/
+    head -1 ./scripts/linux_gnucobol_run_tests | cat -A
     # Run cobolcheck, but don't exit if it fails
-    java -jar ./cobol-check-0.2.19.jar -p $program
+    java -jar ./bin/cobol-check-0.2.19.jar -p $program
     echo "Cobolcheck execution completed for $program (exceptions may have occurred)"
 
     # Check if CC##99.CBL was created, regardless of cobolcheck exit status
