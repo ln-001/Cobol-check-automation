@@ -31,9 +31,9 @@ ls ./scripts/ -al
 run_cobolcheck() {
     program=$1
     echo "Running cobolcheck for $program"
-
+    cd ./bin
     # Run cobolcheck, but don't exit if it fails
-    java -jar ./bin/cobol-check-0.2.19.jar -p $program
+    java -jar cobol-check-0.2.19.jar -p $program
     echo "Cobolcheck execution completed for $program (exceptions may have occurred)"
 
     # Check if CC##99.CBL was created, regardless of cobolcheck exit status
