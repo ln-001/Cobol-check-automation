@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # mainframe_operations.sh
 
 # Set up environment
