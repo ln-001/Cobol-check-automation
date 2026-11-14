@@ -21,7 +21,7 @@ chmod +x cobol-check-0.2.19.jar
 echo "Made cobolcheck executable"
 
 # Make script in scripts directory executable
-chmod +x ./scripts/linux_gnucobol_run_tests.sh
+chmod +x ./scripts/linux_gnucobol_run_tests
 echo "Made linux_gnucobol_run_tests executable"
 
 # Function to run cobolcheck and copy files
