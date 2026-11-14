@@ -1,4 +1,4 @@
-#!/bin/bash
+# !/bin/bash
 # mainframe_operations.sh
 
 # Set up environment
@@ -34,6 +34,7 @@ run_cobolcheck() {
     # Check scripts folder
     ls -l ./scripts/
     head -1 ./scripts/linux_gnucobol_run_tests | cat -A
+    
     # Run cobolcheck, but don't exit if it fails
     java -jar ./bin/cobol-check-0.2.19.jar -p $program
     echo "Cobolcheck execution completed for $program (exceptions may have occurred)"
