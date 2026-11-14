@@ -31,6 +31,9 @@ run_cobolcheck() {
     echo "Running cobolcheck for $program"
 
     # Run cobolcheck, but don't exit if it fails
+
+    echo pwd
+
     java -jar ./bin/cobol-check-0.2.19.jar -p $program
     echo "Cobolcheck execution completed for $program (exceptions may have occurred)"
 
