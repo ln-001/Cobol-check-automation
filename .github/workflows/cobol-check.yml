@@ -37,6 +37,7 @@ jobs:
           ZOWE_OPT_PORT: ${{ secrets.ZOWE_PORT}}
           ZOWE_OPT_USER: ${{ secrets.ZOWE_USERNAME}}
           ZOWE_OPT_PASSWORD: ${{ secrets.ZOWE_PASSWORD}}
+          ZOWE_OPT_REJECT_UNAUTHORIZED: false
           ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
           ZOWE_PASSWORD: ${{ secrets.ZOWE_PASSWORD}}
         run: |
