@@ -15,13 +15,14 @@ ZOWE_USERNAME="Z77196"
 # Change to the cobolcheck directory
 cd cobolcheck
 echo "Changed to $(pwd)"
+ls -al
 
 # Make cobolcheck executable
-chmod +x cobol-check-0.2.19.jar
+chmod +x cobolcheck
 echo "Made cobolcheck executable"
 
 # Make script in scripts directory executable
-cd ./scripts
+cd scripts
 chmod +x linux_gnucobol_run_tests
 echo "Made linux_gnucobol_run_tests executable"
 cd..
@@ -30,8 +31,9 @@ cd..
 run_cobolcheck() {
     program=$1
     echo "Running cobolcheck for $program"
+    
     # Run cobolcheck, but don't exit if it fails
-    java -jar cobol-check-0.2.19.jar -p $program
+    ./cobolcheck -p $program
     echo "Cobolcheck execution completed for $program (exceptions may have occurred)"
 
     # Check if CC##99.CBL was created, regardless of cobolcheck exit status
